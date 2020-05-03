@@ -28,9 +28,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
 
     @IBAction func recordAudio(_ sender: Any) {
-        recordingLabel.text = "Recoring in process"
-        recordButton.isEnabled = false
-        stopRecordingButton.isEnabled = true
+        configureUi(recording: true)
         
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
         let recordingName = "recordedVoice.wav"
@@ -48,10 +46,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     @IBAction func stopRecording(_ sender: Any) {
-        recordingLabel.text = "Tap to record"
-        recordButton.isEnabled = true
-        stopRecordingButton.isEnabled = false
-        
+        configureUi(recording: false)
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)
@@ -61,7 +56,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         if flag {
             performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
         } else {
-        print("recording was not successful")
+            print("recording was not successful")
         }
     }
     
@@ -69,7 +64,20 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         if segue.identifier == "stopRecording" {
             let playSoundVC = segue.destination as! PlaySoundsViewController
             let recordedAudioURL = sender as! URL
-            playSoundVC.recordedAudioUrl = recordedAudioURL
+            playSoundVC.recordedAudioURL = recordedAudioURL
+        }
+    }
+    
+    private func configureUi(recording: Bool) {
+        if recording {
+            recordingLabel.text = "Recoring in process"
+            recordButton.isEnabled = false
+            stopRecordingButton.isEnabled = true
+        } else {
+            recordingLabel.text = "Tap to record"
+            recordButton.isEnabled = true
+            stopRecordingButton.isEnabled = false
         }
     }
 }
+
