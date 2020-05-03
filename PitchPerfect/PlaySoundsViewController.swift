@@ -16,6 +16,7 @@ class PlaySoundsViewController: UIViewController {
     @IBOutlet weak var vedderButton: UIButton!
     @IBOutlet weak var echoButton: UIButton!
     @IBOutlet weak var reverbButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
     
     var recordedAudioUrl: URL!
     
@@ -25,15 +26,13 @@ class PlaySoundsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func playSoundForButton(_ sender: UIButton) {
+        
     }
-    */
+    
+    @IBAction func stopButtonPressed(_ sender: UIButton) {
+        
+    }
 
 }

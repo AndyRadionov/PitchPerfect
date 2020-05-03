@@ -29,6 +29,9 @@
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="playSoundForButton:" destination="MA8-uw-UVB" eventType="touchUpInside" id="wK8-7P-fjp"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ch-c1-dOZ" userLabel="Fast Button">
                                                 <rect key="frame" x="191" y="0.0" width="191" height="228.5"/>
@@ -38,6 +41,9 @@
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="playSoundForButton:" destination="MA8-uw-UVB" eventType="touchUpInside" id="zMD-8z-qRM"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -52,6 +58,9 @@
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="playSoundForButton:" destination="MA8-uw-UVB" eventType="touchUpInside" id="LRm-pX-Hfl"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vm0-Hy-2eI" userLabel="Low Pitch Button">
                                                 <rect key="frame" x="191" y="0.0" width="191" height="229"/>
@@ -61,6 +70,9 @@
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="playSoundForButton:" destination="MA8-uw-UVB" eventType="touchUpInside" id="p5d-Bb-Ude"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -75,6 +87,9 @@
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="playSoundForButton:" destination="MA8-uw-UVB" eventType="touchUpInside" id="Qs3-y3-oCj"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjo-kW-3MQ">
                                                 <rect key="frame" x="191" y="0.0" width="191" height="228.5"/>
@@ -84,6 +99,9 @@
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="playSoundForButton:" destination="MA8-uw-UVB" eventType="touchUpInside" id="4zx-5e-kEM"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -101,6 +119,9 @@
                                     <constraint firstAttribute="height" constant="64" id="xf2-xz-asK"/>
                                 </constraints>
                                 <state key="normal" image="Stop"/>
+                                <connections>
+                                    <action selector="stopButtonPressed:" destination="MA8-uw-UVB" eventType="touchUpInside" id="ycu-tn-fsa"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -126,6 +147,7 @@
                         <outlet property="rabbitButton" destination="8ch-c1-dOZ" id="Z6A-t0-19o"/>
                         <outlet property="reverbButton" destination="kjo-kW-3MQ" id="r2c-ya-lTR"/>
                         <outlet property="snailButton" destination="Ah1-te-PsU" id="ttL-Df-zep"/>
+                        <outlet property="stopButton" destination="YWm-DU-gDR" id="HCo-Pq-Typ"/>
                         <outlet property="vedderButton" destination="vm0-Hy-2eI" id="6eN-E6-0ka"/>
                     </connections>
                 </viewController>
